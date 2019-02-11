@@ -1,0 +1,131 @@
+%+++++++++++++++++++++++++++++++++++++++++++
+%   Language Decision
+
+%ENGLISH-VERSION - DEFAULT
+\documentclass{acm_proc_article-sp}
+
+%GERMAN-Version
+%\documentclass{acm_proc_article-sp-german}
+%+++++++++++++++++++++++++++++++++++++++++++
+
+
+\usepackage{makeidx}  % allows for indexgeneration
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[acronym]{glossaries} % Glossar und Akronyme
+
+% folgende Zeile erzwingt URL-Umbrueche
+\def\UrlBreaks{\do\/\do-}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,trees,backgrounds}
+
+\begin{document}
+
+\title{
+	Secure Email - A Usability Study\\
+	\vspace{20pt}
+	\large
+	\affaddr{Projet Fin d'Études (PFE)}\\
+	\affaddr{CryptogrAphie, Sécurité, et vie Privée dans les Applications et Réseaux (CASPAR)}\\
+	\affaddr{Supervisor: Karima Boudaoud}\\
+	\affaddr{Polytech Nice Sophia Antipolis}\\
+}
+
+\numberofauthors{3} 
+
+\author{
+	Adrian Reuter\\
+	\affaddr{Technische Universität München (TUM)}\\
+	\affaddr{Email: adrian.reuter@tum.de}
+	\and
+	Ahmed Abdelmaksoud\\
+	\affaddr{Polytech Nice Sophia Antipolis}\\
+	\affaddr{Email: }
+	\and
+	Wadie Lemrazzeq\\
+	\affaddr{Polytech Nice Sophia Antipolis}\\
+	\affaddr{Email: }
+}
+
+
+\maketitle
+%\pretolerance=150
+
+\newacronym{ca}{CA}{Certification Authority}
+\newacronym{pgp}{PGP}{Pretty Good Privacy}
+\newacronym{pep}{pEp}{Pretty Easy Privacy}
+\newacronym{smime}{S/MIME}{Secure Multipurpose Internet Mail Extension}
+\newacronym{email}{e-mail}{electronic mail}
+
+%++++++++++++++++++++++++++++++++
+%+   ABSTRACT                   +
+%++++++++++++++++++++++++++++++++
+\begin{abstract} 
+\input{chapters/abstract}
+\end{abstract}
+
+%++++++++++++++++++++++++++++++++
+%+   Keywords                   +
+%++++++++++++++++++++++++++++++++
+\keywords{Source Routing, Source Packet Routing, Segment Routing, MPLS, SPRING, RPL, DSR, RH0} 
+
+%++++++++++++++++++++++++++++++++
+%+   Chapters                   +
+%++++++++++++++++++++++++++++++++
+\input{chapters/introduction}
+
+\input{chapters/analysis-pgp}
+\input{chapters/analysis-smime}
+\input{chapters/analysis-pep}
+
+
+
+\input{chapters/conclusion}
+
+\input{chapters/example}
+
+%\bibliographystyle{abbrv}
+\bibliographystyle{ieeetr}
+%++++++++++++++++++++++++++++++++++++++++
+%+   Refernces - .bib-File version  +
+%++++++++++++++++++++++++++++++++++++++++
+\bibliography{ref,rfc}
+
+\end{document}
+
+%++++++++++++++++++++++++++++++++
+%+    Figure                    +
+%++++++++++++++++++++++++++++++++
+
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.95\linewidth]{graphik}
+%	\caption{Graphic in b/w as .pdf}
+%	\label{fig:graphik}
+%\end{figure}
+
+
+%++++++++++++++++++++++++++++++++
+%+    Table                     +
+%++++++++++++++++++++++++++++++++
+
+%\begin{table}
+%\centering
+%\caption{Frequency of Special Characters}
+%\begin{tabular}{|c|c|l|} \hline
+%Non-English or Math&Frequency&Comments\\ \hline
+%\O & 1 in 1,000& For Swedish names\\ \hline
+%$\pi$ & 1 in 5& Common in math\\ \hline
+%\$ & 4 in 5 & Used in business\\ \hline
+%$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+%\hline\end{tabular}
+%\end{table}
+%
+%If due to some reason the written line makes no normal 
+%line-break (can be seen in the pdf.) just type /linebreak 
+%in front of the corresponding word and as a consequence the 
+%line-break will be done.
