@@ -1,2 +1,26 @@
 \section{Introduction}
-asdfasdfa
+The most valuable information that is collected and traded in today's internet, is the personalized data of internet users. To prevent cyber-crime and to protect user privacy, almost all services running in the internet critically depend cyber security measures. Most dominantly, transport layer security (TLS) is used for securing a variety of communication protocols. Particularly when browsing the world wide web using HTTP, transport security has found wide adoption and awareness of its imperative necessity. Internet Banking, shopping on Amazon.com, accessing governmental e-services - those are just a few examples for internet use cases in which users became more and more aware of the security critical nature of these web applications, even if they might not understand the attack vectors and their risks in depth. 
+
+A huge step towards more secure internet communication has been the integration of end-to-end cryptography in mobile internet messenger services such as Whatsapp, Signal or Telegram. In contrast, for securing one of the most commonly used communication channels - the electronic mail - end-to-end encryption is only applied by a neglectable faction \cite{secureEmail} of email users. Standardized technologies for cryptographically securing email exchanges have been available for decades. Nevertheless most users rely on unencrypted and unauthenticated email communication, often without being aware that there exist mechanisms which would mitigate the security implications that come with it. The relevance of applying end-to-end cryptography to our daily email communication can be exemplarily depicted with the following scenarios:
+\begin{itemize}
+	\item Protecting confidentiality \newline
+	The content of an email should be kept confidential and should not be readable by someone other than the intended recipient of the email. Emails often communicate sensitive data about human or non-human assets.
+	For example: Personal data, business secrets, industrial know-how, investigative journalism and almost all password-recovery routines for any web application critically depend on email exchanges.
+	\item Protecting privacy \newline
+	Personal information of users communicated over emails should not be processed and analyzed by any other entity than the intended recipient of the email.
+	For example: Entities that can listen to internet traffic such as internet service providers, email providers themselves, analytics services should not be able to collect personal data exchanged via email, as the content was not intended to be exposed to 3rd party entities
+	\item Protecting integrity \newline
+	The content of an email should not be tampered with by any other entity other than the sender of an email, i.e. no other entity should be able to altering the content without the recipient being able to detect this illegitimate modification. This feature is typically provided by a digital signature.
+	\item Provide authenticity and non-repudiation
+	No entity should be able to impersonate another email user and write emails in his or her name. In order words, the recipient of an email should be able to trust the origin of an email; a received email should not originate from any other entity than the sender indicated to the recipient. Likewise, a sender should not be able to disclaim the content of sent mails, which provides non-repudiation for the recipient.
+	For example: Information distributed via mail (e.g. agreements on deliverables, meeting appointments, conditions and contract sent within email as document in email attachments) cannot neither be changed nor denied afterwards.
+	Emails are authentic and are not spoofed, severely complicating phishing attacks.
+\end{itemize}
+To achieve the previously mentioned security goals, two major end-to-end encryption technologies exist since decades, namely Pretty Good Privacy (PGP) \cite{rfc1991} and Secure Multipurpose Internet Mail Extensions (S/MIME) \cite{rfc2633}. A recent initiative called Pretty Easy Privacy (pEp) \cite{pEp} made efforts to simplify the usage of end-to-end cryptography in email communication for novice users. Unfortunately, those technologies are still barely deployed. According to \cite{secureEmail} more than 95\% of the overall email traffic is exchanged without end-to-end encryption.
+\newline
+\newline
+\textbf{Our central research questions are:}
+\begin{itemize}
+	\item identifying why users are hesitating to use the above mentioned technologies.
+	\item which usability issues exist that hinder users from securing their daily email communication using end-to-end encryption.
+\end{itemize}
