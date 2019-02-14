@@ -2,17 +2,76 @@
 \textit{We note that the given time and resource constraints limited our sample size, and consequently the number of survey participants is too low to permit informative statistical analysis of the results. However, we do not consider this to be a major shortcoming since demonstrating statistical significance is not essential for the purpose of this study. The number of participants was sufficient for our purposes.}\\
 The online survey was launched on 30 November 2018, it reached 50 participants on 12 December 2018 when we start analysis of surveys results.\\
 As we described before, the online survey has six section, each section treats a certain matter related to end-to-end encryption usability. The survey begins with a demographic section. We can summarize that the majority of the participant was under 30 year old, coming from Germany, Egypt, Morocco, most of them were students, and employees working for IT organizations.\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/How many of the received email are sent or received encrypted".png}
+	\centering
+	\caption{How many of the received email are sent or received encrypted ?}
+\end{figure}\\
 Concerning their personal experience with email exchange, it appears that emails constitute a remarkable portion of their daily communications, reaching at least 7 emails per day, but most of them are nor encrypted neither signed, 38\% receive at least 1 email encrypted per day (Figure 3), and less than half of the our survey participants were obliged to use end-to-end encryption by their organizations.\\
-The participants use different platforms and MUAs, more than half use dedicated mobile applications, 50\% use web-mail, and 44\% use dedicated desktop applications (Figure 4).
-From our participants, 40\% state they knew PGP prior to this survey, 16\% are also using it (Figure 5).\\
-70\% of our participants state that they cannot use PGP on all mails due to the fact that the recipient does not use PGP. On the other hand, 25\% thinks that it’s difficult to find the recipient's public key, 20\% think configuring PGP is time consuming and just 5\% declare that PGP it is not implemented on their favorite platform / email client. 20\% of our participants always verify the fingerprint of the recipient key, 30\% do so occasionally and 35\% never do (Figure 6).
+The participants use different platforms and MUAs, more than half use dedicated mobile applications, 50\% use web-mail, and 44\% use dedicated desktop applications (Figure \ref{fig:encryptedemail}).\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/Which mail software do you use to access your mails".png}
+	\centering
+	\caption{Which mail software do you use to access your mails ?}
+	\label{fig:encryptedemail}
+\end{figure}\\
+From our participants, 40\% state they knew PGP prior to this survey, 16\% are also using it (Figure \ref{fig:pgp}).\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/Do you know a technology called Pretty Good Privacy (PGP)".png}
+	\centering
+	\caption{Do you know a technology called Pretty Good Privacy (PGP) ?}
+	\label{fig:pgp}
+\end{figure}\\
+70\% of our participants state that they cannot use PGP on all mails due to the fact that the recipient does not use PGP. On the other hand, 25\% thinks that it's difficult to find the recipient's public key, 20\% think configuring PGP is time consuming and just 5\% declare that PGP it is not implemented on their favorite platform / email client. 20\% of our participants always verify the fingerprint of the recipient key, 30\% do so occasionally and 35\% never do (Figure \ref{fig:fingerprintpgp}).\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/Do you verify the key fingerprint of other PGP users".png}
+	\centering
+	\caption{Do you verify the key fingerprint of other PGP users ?}
+	\label{fig:fingerprintpgp}
+\end{figure}\\
 The participants concede that PGP guaranties privacy, confidentiality, authenticity and integrity, adding that it has no cost in order to use it. On the other hand they disprove as being complex, comparing fingerprints was difficult and time consuming, and requiring the recipient to use it as well, which is not always the case given that PGP is not widely adopted.
 Also, participants suggest to make PGP supported on all platforms and simplify fingerprint comparison.\\
-Also for S/MIME, we asked before proceeding with detailed questions, if our participants already knew S/MIME, with 36\% saying so (Figure 7).
-The participants experience also that the recipient does not use S/MIME with 61\%, 28\% do not trust digital certificates or its issuing entity, and only 11\% do not know how to obtain digital certificate. 17\% encounter difficulties configuring their environment to use S/MIME. 27\% admit that they had issues with untrusted certificates (Figure 8), for 28\% of the participants the fact that they have to pay for a trustworthy certificate is an obstacle.
+Also for S/MIME, we asked before proceeding with detailed questions, if our participants already knew S/MIME, with 36\% saying so (Figure \ref{fig:s/mime}).\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/Do you know a technology called Secure Multipurpose Internet Mail Extension".png}
+	\centering
+	\caption{Do you know a technology called Secure Multipurpose Internet Mail Extension (S/MIME)}
+	\label{fig:s/mime}
+\end{figure}\\
+The participants experience also that the recipient does not use S/MIME with 61\%, 28\% do not trust digital certificates or its issuing entity, and only 11\% do not know how to obtain digital certificate. 17\% encounter difficulties configuring their environment to use S/MIME. 27\% admit that they had issues with untrusted certificates (Figure \ref{fig:s/mimecert}), for 28\% of the participants the fact that they have to pay for a trustworthy certificate is an obstacle.\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/Did you ever encounter difficulties using SMIME because the certificate of your communication partner was issued by an untrusted authority".png}
+	\centering
+	\caption{Did you ever encounter difficulties using S/MIME because the certificate of your communication partner was issued by an untrusted authority ?}
+	\label{fig:s/mimecert}
+\end{figure}\\
 The participants agreed that S/MIME has the advantage of being integrated in most email clients including Apple MacOS/iOS, but they discredit S/MIME because they need to pay to obtain a trustfully certificate.\\
-Apparently, pEp it is not as known as the other previous technologies, only 10\% who know it. No participant stated that he ever used it (Figure 9).
+Apparently, pEp it is not as known as the other previous technologies, only 10\% who know it. No participant stated that he ever used it (Figure \ref{fig:pep}).\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/Do you know a technology called Pretty Easy Privacy".png}
+	\centering
+	\caption{Do you know a technology called Pretty Easy Privacy (pEp) ?}
+	\label{fig:pep}
+\end{figure}\\
 40\% of the participants hesitate to use pEp because their recipients will not use pEp.\\
-Assessing their overall impression, the participants are mostly aware of the importance of email encryption: 66\% think that email encryption is important to very important (Figure 10).
-Considering the scenario of non-secured mail exchange, more than 60\% of our participants can imagine that their emails can be passively or actively tampered with; an even larger percentage of 86\% assumes that an entity other than the mail recipient can read mail contents (Figure 11).
-Assessing the importance of specific security goals, almost all of our participants estimate the confidentiality, integrity and authenticity of their mails as important or very important, only for 6\% confidentiality does not matter and only for 2\% the integrity of their sent mails does not matter (Figure 12).
+Assessing their overall impression, the participants are mostly aware of the importance of email encryption: 66\% think that email encryption is important to very important (Figure \ref{fig:impression}).\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/According to your personal impression, how would you scale the importance of email encryption".png}
+	\centering
+	\caption{According to your personal impression, how would you scale the importance of email encryption ?}
+	\label{fig:impression}
+\end{figure}\\
+Considering the scenario of non-secured mail exchange, more than 60\% of our participants can imagine that their emails can be passively or actively tampered with; an even larger percentage of 86\% assumes that an entity other than the mail recipient can read mail contents (Figure \ref{fig:scenario}).\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/Considering a scenario of using non-encrypted email communication, which of the following may occur".png}
+	\centering
+	\caption{Considering a scenario of using non-encrypted email communication, which of the following may occur ?}
+	\label{fig:scenario}
+\end{figure}\\
+Assessing the importance of specific security goals, almost all of our participants estimate the confidentiality, integrity and authenticity of their mails as important or very important, only for 6\% confidentiality does not matter and only for 2\% the integrity of their sent mails does not matter (Figure \ref{fig:goals}).\\
+\begin{figure}
+	\includegraphics[width=\linewidth]{"figures/Please indicate the importance that the following security goals have for you".png}
+	\centering
+	\caption{Please indicate the importance that the following security goals have for you}
+	\label{fig:goals}
+\end{figure}\\

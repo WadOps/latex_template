@@ -1,19 +1,19 @@
 \subsection{\acrfull{smime}}
 \label{chap:analysis-smime}
 
-With the increase of power in terms of computation and networking capability, people’s need for using non-textual objects such as image, audio, and video in emails became a fair demand. To support diversity of content, multipart message structure, and non-English text, the Multipurpose Internet Mail Extension (MIME) was proposed in 1993 [8]. S/MIME (Secure/Multipurpose Internet Mail Extension) is an enhancement of MIME to provide cryptographic security for the MIME based emails [8]. To better understand S/MIME, let us first take look at MIME.
+With the increase of power in terms of computation and networking capability, people's need for using non-textual objects such as image, audio, and video in emails became a fair demand. To support diversity of content, multipart message structure, and non-English text, the Multipurpose Internet Mail Extension (MIME) was proposed in 1993 \cite{rfc1521}. S/MIME (Secure/Multipurpose Internet Mail Extension) is an enhancement of MIME to provide cryptographic security for the MIME based emails \cite{rfc1521}. To better understand S/MIME, let us first take look at MIME.
 S/MIME adds some additional content types to the MIME to provide security services. The current S/MIME version 3.2 obsoletes all earlier versions. However, most implementations still bear version 3.1 features for digital signature processing. Today, popular email clients such as MS Outlook 2013, MS Outlook 2016, Mozilla Thunderbird, Apple Mail support S/MIME enabled messages.
 S/MIME version 3.2 is defined by the following five major specifications.
 \begin{itemize}
-\item Cryptographic Message Syntax (RFC 4853)
-\item Cryptographic Message Syntax (CMS) Algorithms (RFC 3370)
-\item Diffie-Hellman Key Agreement Method (RFC 2631)
-\item S/MIME Version 3.2 Certificate Handling (RFC 5750) [10]
-\item S/MIME Version 3.2 Message Specification (RFC 5751) [11]
-\item Enhanced Security Services for S/MIME (RFC 2634) [12]
+\item Cryptographic Message Syntax (RFC 4853 \cite{rfc4853})
+\item Cryptographic Message Syntax (CMS) Algorithms (RFC 3370 \cite{rfc3370})
+\item Diffie-Hellman Key Agreement Method (RFC 2631 \cite{rfc2631})
+\item S/MIME Version 3.2 Certificate Handling (RFC 5750 \cite{rfc5750})
+\item S/MIME Version 3.2 Message Specification (RFC 5751 \cite{rfc5751})
+\item Enhanced Security Services for S/MIME (RFC 2634 \cite{rfc2634})
 \end{itemize}
 \textbf{Cryptographic Message Syntax (CMS)}
-To define how security services, such as confidentiality or integrity, can be added to MIME content types, S/MIME defines Cryptographic Message Syntax (CMS). The syntax in each case defines the exact encoding scheme for each content type. Discussed below are the different types of messages and different sub-types that are created from these messages [14].
+To define how security services, such as confidentiality or integrity, can be added to MIME content types, S/MIME defines Cryptographic Message Syntax (CMS). The syntax in each case defines the exact encoding scheme for each content type. Discussed below are the different types of messages and different sub-types that are created from these messages \cite{PKCS-7}.
 \begin{itemize}
 \item Data Content Type is an arbitrary string.  The object created is called "Data".
 \item Digested-Data Content Type is used to provide integrity for the message. The result is typically used as the content for the enveloped-data content type.  The encoded result is an object called "digested-data".  The process of creating "digested-data" involves the following two steps
@@ -39,4 +39,4 @@ To define how security services, such as confidentiality or integrity, can be ad
 S/MIME specifies several cryptographic algorithms for use. The term "must" indicate absolute requirement, and the term "should" imply recommendation only. S/MIME recommends using SHA-256 as hash function for creating message digests. For content encryption RSA is recommended.
 \newline
 \textbf{Key Management and Certification}
-The key management in S/MIME is a combination of key management used by X.509 and PGP. S/MIME uses public key certificates signed by the Certification Authorities (CA) defined by X.509. The user is responsible for maintaining the web of trust to verify signatures as defined by PGP. In general, for key establishment, a user needs to get his or her pair of public and private keys certified by trusted CAs [13].
+The key management in S/MIME is a combination of key management used by X.509 and PGP. S/MIME uses public key certificates signed by the Certification Authorities (CA) defined by X.509. The user is responsible for maintaining the web of trust to verify signatures as defined by PGP. In general, for key establishment, a user needs to get his or her pair of public and private keys certified by trusted CAs \cite{SEmailETU}.
