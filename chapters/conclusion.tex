@@ -5,11 +5,11 @@ Our three fold approach gave us both, an overall view on the awareness of the em
 \newline
 We present the improvement suggestions by technology:
 \begin{itemize}
-	\item \underline{Improvements for \acrshort{pgp}:}\newline
+	\item \textbf{Improvements for \acrshort{pgp}:}\newline
 	We found out that on all tested platforms, users are restricted to the search for the recipient key only at one key server at a time, which makes importing the recipient key the major obstacle when using \acrshort{pgp}. Thus, we suggest to fix this issue by letting implementations search for the recipient key on all available key-servers at a time, without the user needing to manually adjust the key server for key import
-	\item \underline{Improvements for \acrshort{smime}}\newline
+	\item \textbf{Improvements for \acrshort{smime}}\newline
 	We suggest Certification Authorities to send further information on how to import the certificate into the most frequently used email programs, alongside the email which contains the requested digital certificate. Also, we suggest to integrate \acrshort{smime} support into webmail plugins, as webmail nowadays is used more commonly than dedicated desktop applications.
-	\item \underline{Improvements for \acrshort{pep}}\newline
+	\item \textbf{Improvements for \acrshort{pep}}\newline
 	We suggest \acrshort{pep} implementations to add further explanation on what to do with the trustwords displayed to the users during handshake. We furthermore advise to briefly explain the \acrshort{pep} color scheme that represents the security status of a communication channel to the user.
 	Moreover we criticize the design choice of not being able to do a new handshake with a user whose public key was previously mistrusted. As a trustword mismatch can too easily occur due to a different language selection of the trustword dictionary on side of both users.	
 \end{itemize}
