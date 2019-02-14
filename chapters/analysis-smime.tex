@@ -13,12 +13,8 @@ S/MIME version 3.2 is defined by the following five major specifications.
 \item Enhanced Security Services for S/MIME (RFC 2634 \cite{rfc2634})
 \end{itemize}
 \textbf{Cryptographic Message Syntax (CMS)}
-<<<<<<< HEAD
-To define how security services, such as confidentiality or integrity, can be added to MIME content types, S/MIME defines Cryptographic Message Syntax (CMS). The syntax in each case defines the exact encoding scheme for each content type. Discussed below are the different types of messages and different sub-types that are created from these messages \cite{PKCS-7}.
-=======
 \newline
-To define how security services, such as confidentiality or integrity, can be added to MIME content types, S/MIME defines Cryptographic Message Syntax (CMS). The syntax in each case defines the exact encoding scheme for each content type. Discussed below are the different types of messages and different sub-types that are created from these messages [14].
->>>>>>> d0ce37ebfd43e6c9554f89e470ca7634f8cac950
+To define how security services, such as confidentiality or integrity, can be added to MIME content types, S/MIME defines Cryptographic Message Syntax (CMS). The syntax in each case defines the exact encoding scheme for each content type. Discussed below are the different types of messages and different sub-types that are created from these messages \cite{PKCS-7}.
 \begin{itemize}
 \item Data Content Type is an arbitrary string.  The object created is called "Data".
 \item Digested-Data Content Type is used to provide integrity for the message. The result is typically used as the content for the enveloped-data content type.  The encoded result is an object called "digested-data".  The process of creating "digested-data" involves the following two steps
@@ -44,6 +40,8 @@ To define how security services, such as confidentiality or integrity, can be ad
 \newline
 S/MIME specifies several cryptographic algorithms for use. The term "must" indicate absolute requirement, and the term "should" imply recommendation only. S/MIME recommends using SHA-256 as hash function for creating message digests. For content encryption RSA is recommended.
 \newline
+\newline
 \textbf{Key Management and Certification}
+\newline
 The key management in S/MIME is a combination of key management used by X.509 and PGP. S/MIME uses public key certificates signed by the Certification Authorities (CA) defined by X.509. The user is responsible for maintaining the web of trust to verify signatures as defined by PGP. In general, for key establishment, a user needs to get his or her pair of public and private keys certified by trusted CAs \cite{SEmailETU}.
 
