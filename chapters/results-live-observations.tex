@@ -42,6 +42,7 @@ As we can see from the Table \ref{tab:ResultsPGP}, \acrshort{pgp} requires many 
 \end{table*}
 
 \subsubsection{Results of \acrshort{smime}:}
+From the Table \ref{tab:ResultsSMIME}, we can see that \acrshort{smime} is easy to use on the desktop \acrshort{mua}s except for Outlook. Thanks to the way \acrshort{smime} works is easier for the novice users, because the users don't have to generate any keys. They receive both public and private digital certificate and they have just import it into the \acrshort{mua}. Once a user receives a signed email, the sender's public certificate is integrated automatically into the \acrshort{mua}. So, the users don't have do any supplementary steps other than configuring \acrshort{smime} in the desired \acrshort{mua}. However, we can conclude that's very difficult to use \acrshort{smime} on Outlook, as the options to import the digital certificate are difficult to find and the user can send an encrypted email only as reply to an a mail that is already secured via \acrshort{smime} (digitally signed). Also, on iOS it's very difficult to activate \acrshort{smime} on the device as the option is not easy to find and there's not any way for the user to send the pfx file back to the device than to send himself an email containing the pfx file. Moreover, the configuration to activate \acrshort{smime} on the iOS devices varies from one iOS version to another.
 
 \begin{table*}[]
 	\begin{tabular}{|l|l|l|l|}
@@ -84,7 +85,7 @@ As we can see from the Table \ref{tab:ResultsPGP}, \acrshort{pgp} requires many 
 \end{table*}
 
 \subsubsection{Results of \acrshort{pep}:}
-We can see from the Table \ref{tab:ResultspEp} that pEp is the easiest technology to use, but it's not (yet) compatible with all platforms. As consequence, we couldn't test it on Apple MacOS or Apple iOS platforms.
+We can see from the Table \ref{tab:ResultspEp} that \acrshort{pep} has the fewest steps in order to configure it and to use it. \acrshort{pep} abstracts many layers and requires only the comparison of trustwords through a handshake which is a very simple step to do. Therefore, \acrshort{pep} is for the ones that would like to secure their email communication without knowing anything about the functionalities and the majority of the users know nothing about security mechanisms and cryptography. So, \acrshort{pep} is the easiest technology to use but it's not (yet) compatible with all platforms. As consequence, we couldn't test it on Apple MacOS or Apple iOS platforms which is used by a big number of people.
 
 \begin{table*}[!h]
 	\begin{tabularx}{\textwidth}{|l|l|X|l|}
