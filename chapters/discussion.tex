@@ -16,4 +16,79 @@ We were able to validate every answer in the the technologies sections we receiv
 for the participants of the online survey who use \acrshort{pgp} is getting the recipient key (25\%) and it's the same issue for the participants of the live observations. Moreover, the major obstacle of for the participants of the online survey who use \acrshort{smime} is to obtain a free digital certificate from a trusted \acrlong{ca}. When we solved this problem for the participants of the live
 observations, the following major issue was configuring their environment to use \acrshort{smime} (i.e. import own certificate), and that was the same issue for the participants from the online survey (17\%). Finally, we noticed that the popularity of three technologies is very low, as we observe from the online survey: 60\% never heard of \acrshort{pgp}, 64\% never heard of \acrshort{smime} and 90\% never
 heard of \acrshort{pep}. In addition, one out of the twelve live observations, the user heard of \acrshort{pgp}, only one of three technologies. However, we believe that if we manage to solve all the difficulties in order to increase the usability, the popularity of the technologies will increase as well. So, we can accept the results and start to work on improvements for every technology in order to make
-it more useable which will be discussed in the following section.
+it more usable which will be discussed in the following section.
+
+\begin{table*}[]
+	\begin{tabular}{|l|l|}
+		\hline
+		{\textbf{Usability}}  	&\textbf{PGP} \\ \hline
+		 {Compatibility.}		&\vtop{\hbox{\strut High compatibility:$\rightarrow$ OS: 68,4\%("No problem")}\hbox{\strut $\rightarrow$ vast support on many platforms (iOS, macOS, Win,Linux, Android, Webmail).}} \\ \hline
+		 
+		 {Configuration.}		&\vtop{\hbox{\strut Easy to integrate:OS: 5\%, "Mail clients have problems using PGP"}\hbox{\strut LO: Tested on all platforms without bugs}} \\ \hline
+		 {Key Management.}		&Managed by the users.\\ \hline						
+		 {Key pair generation.}	&LO: key creation difficult on Android \\ \hline	
+		 {Key import of other people’s public key.} 	&\vtop{\hbox{\strut OS: 25\%, "It's difficult to to find other person's public key"}\hbox{\strut OS: 20\%, "Importing the keys of others consumes time"} \hbox{\strut LO: downloading from key server is time-consuming, yet keys are
+		 		not always found}} \\ \hline
+		 {Usage of an already existing key-pair.}		&A: Easy reuse the same key pair on different platforms.\\ \hline
+		 	{\vtop{\hbox{\strut Conditions to have fully}\hbox{\strut secure communication channel.}}}	&\vtop{\hbox{\strut Search for the recipient public key:}\hbox{\strut $\rightarrow$ possibility to send the first mail encrypted and signed.}} \\ \hline
+		 {Popularity of technology.}		&OS: 59.2\%, "Never heard of it".\\ \hline
+		 {Availability.}		&\vtop {\hbox{Free on all platforms except iOS and macOS:}\hbox{ OS: 20\%, "I have to pay for the software (e.g Apple)"}\hbox{LO: Tested on the available platforms}} \\ \hline
+		{\vtop{\hbox{\strut Number of steps to have a}\hbox{\strut fully secure communication channel}}}	&\vtop{\hbox {\strut LO: Seven steps (mobile).}\hbox{\strut 	Five steps (computer)}}\\ \hline
+	\end{tabular}
+	\caption{Correlation of online survey results with live observation results for \acrshort{pgp} \label{tab:SynthesePGP}}
+	\vspace{5 pt}
+		\small OS = Information obtained from the Online Survey. \\
+		LO = Information obtained from the Live Observations. \\
+		A = Information obtained from our Analysis.
+
+\end{table*}
+
+\begin{table*}[]
+	\begin{tabular}{|l|l|}
+		\hline
+		{\textbf{Usability}}  	&\textbf{S/MIME} \\ \hline
+		{Compatibility.}		&\vtop{\hbox{\strut High compatibility:$\rightarrow$ OS: 5,6\% ("my mail software does not support S/MIME")
+				}\hbox{\strut $\rightarrow$ vast support on many platforms (iOS, macOS, Win,Linux, Android, Webmail).}\hbox{(attention: but not webmail, serious because of 50\% users us it)}} \\ \hline
+		
+		{Configuration.}		&\vtop{\hbox{\strut Easy to integrate OS: 16.7\%, "It's difficult to configure S/MIME on my environment"}\hbox{\strut LO: Settings aren't always easy to find to import the certificate.}} \\ \hline
+		{Key Management.}		&OS: 27,8\%, "I don't trust digital certificates"\\ \hline						
+		{Key pair generation.}	&\vtop {\hbox{OS: 11,1\%, "I don't know how to obtain a digital certificate"}\hbox{OS: 27,8\%, "I have to pay to obtain a digital certificate"}\hbox {LO: once found the service, it's easy to get certificate (keys)}} \\ \hline	
+		{Key import of other people’s public key.} 	&\vtop{\hbox{OS: 27,8\%, "Yes", "Did you ever encounter ....untrusted certificate"}\hbox{A: certificate imported automatically when signed mail received}} \\ \hline
+		{Usage of an already existing key-pair.}		&A: Easy to reuse the same certificate on different platforms\\ \hline
+		{\vtop{\hbox{\strut Conditions to have fully}\hbox{\strut secure communication channel.}}}	&\vtop{\hbox{Send the first mail signed only to retrieve the recipient public key}\hbox{ $\rightarrow$ then send the next emails signed and encrypted.}} \\ \hline
+		{Popularity of technology.}		&OS: 63.3\%, "Never heard of it".\\ \hline
+		{Availability.}		&\vtop {\hbox{Free for 1 year on all platforms:}\hbox{OS: 27.8\%, "I have to pay to obtain a digital certificate}\hbox{LO: Tested on the available platforms}} \\ \hline
+		{\vtop{\hbox{ Number of steps to have a}\hbox{ fully secure communication channel}}}	&\vtop{\hbox {LO: Eight steps (mobile).}\hbox{Five steps (computer).}}\\ \hline
+	\end{tabular}
+	\caption{Correlation of online survey results with live observation results for \acrshort{smime} \label{tab:SyntheseS/MIME}}
+	\vspace{5 pt}
+	\small OS = Information obtained from the Online Survey. \\
+		LO = Information obtained from the Live Observations. \\
+		A = Information obtained from our Analysis.
+\end{table*}
+
+\begin{table*}[]
+	\begin{tabular}{|l|l|}
+		\hline
+		{\textbf{Usability}}  	&\textbf{pEp} \\ \hline
+		{Compatibility.}		&\vtop{\hbox{Low compatibility:$\rightarrow$ OS: 20\% ("my mail software does not support pEp")
+			}\hbox{ $\rightarrow$ only Win, Linux, Android}\hbox{(attention: no webmail support !)}} \\ \hline
+		
+		{Configuration.}		&\vtop{\hbox{Hard to integrate:}\hbox{LO: Tested on only 2 platforms ("Android", "Thunderbird").}} \\ \hline
+		{Key Management.}		&Managed automatically \\ \hline						
+		{Key pair generation.}	&\vtop {\hbox{A: After installing the plugin, key pair generated automatically.}\hbox{LO: After installing the plugin, key pair generated automatically.}} \\ \hline	
+		{Key import of other people’s public key.} 	&\vtop{\hbox{A: Abstraction, full automatic key management.}\hbox{$\rightarrow$ After receiving an email, it's done automatically.}\hbox{LO: After receiving an email, it's done automatically.}} \\ \hline
+		{Usage of an already existing key-pair.}		&A: Bad key management. no synchronization between different platforms \\ \hline
+		{\vtop{\hbox{\strut Conditions to have fully}\hbox{\strut secure communication channel.}}}	&\vtop{\hbox{Send the first email unencrypted and unsigned:}\hbox{ $\rightarrow$ Do the handshake to secure the channel.}\hbox{OS: 0\%, "Handshake fails often because trust words aren't the same"
+		}} \\ \hline
+		{Popularity of technology.}		&OS: 89.8\%, "Never heard of it".\\ \hline
+		{Availability.}		&\vtop {\hbox{Free on Thunderbird only:}\hbox{OS: 20\%, "I have to pay for the software".}\hbox{LO: Tested on the available platforms}\hbox{A: the official version of the Android application.}} \\ \hline
+		{\vtop{\hbox{ Number of steps to have a}\hbox{ fully secure communication channel}}}	&LO: Four steps.\\ \hline
+	\end{tabular}
+	\caption{Correlation of online survey results with live observation results for \acrshort{pep} \label{tab:SynthesepEp}}
+	\vspace{5 pt}
+	\small OS = Information obtained from the Online Survey. \\
+		LO = Information obtained from the Live Observations. \\
+		A = Information obtained from our Analysis.
+\end{table*}
+
