@@ -1,20 +1,22 @@
 \subsection{\acrfull{smime}}
 \label{chap:analysis-smime}
 
-With the increase of power in terms of computation and networking capability, people's need for using non-textual objects such as image, audio, and video in emails became a fair demand. To support diversity of content, multipart message structure, and non-English text, the \acrfull{mime} was proposed in 1993 \cite{rfc1521}. \acrfull{smime} is an enhancement of \acrshort{mime} to provide cryptographic security for the \acrshort{mime} based emails \cite{rfc1521}. To better understand \acrshort{smime}, let us first take look at \acrshort{mime}.
-\acrshort{smime} adds some additional content types to the \acrshort{mime} to provide security services. The current \acrshort{smime} version 3.2 obsoletes all earlier versions. However, most implementations still bear version 3.1 features for digital signature processing. Today, popular email clients such as MS Outlook 2013, MS Outlook 2016, Mozilla Thunderbird, Apple Mail support \acrshort{smime} enabled messages.
-\acrshort{smime} version 3.2 is defined by the following five major specifications.
-\begin{itemize}
-\item Cryptographic Message Syntax (RFC 4853 \cite{rfc4853})
-\item Cryptographic Message Syntax (CMS) Algorithms (RFC 3370 \cite{rfc3370})
-\item Diffie-Hellman Key Agreement Method (RFC 2631 \cite{rfc2631})
-\item S/MIME Version 3.2 Certificate Handling (RFC 5750 \cite{rfc5750})
-\item S/MIME Version 3.2 Message Specification (RFC 5751 \cite{rfc5751})
-\item Enhanced Security Services for S/MIME (RFC 2634 \cite{rfc2634})
-\end{itemize}
+With the increase of power in terms of computation and networking capability, people's need for using non-textual objects such as image, audio, and video in emails became a fair demand. To support diversity of content, multipart message structure, and non-English text, the \acrfull{mime} was proposed in 1993 \cite{rfc1521}. \acrfull{smime} is an enhancement of \acrshort{mime} to provide cryptographic security for \acrshort{mime} based emails \cite{rfc1521}. %To better understand \acrshort{smime}, let us first take look at \acrshort{mime}.
+\acrshort{smime} adds some additional content types to the \acrshort{mime} to provide security features. The current \acrshort{smime} version 3.2 obsoletes all earlier versions. However, most implementations still bear version 3.1 features for digital signature processing. Today, popular email clients such as MS Outlook 2013, MS Outlook 2016, Mozilla Thunderbird, Apple Mail support \acrshort{smime} enabled messages.
+%\acrshort{smime} version 3.2 is defined by the following five major specifications.
+%\begin{itemize}
+%\item Cryptographic Message Syntax (RFC 4853 \cite{rfc4853})
+%\item Cryptographic Message Syntax (CMS) Algorithms (RFC 3370 %\cite{rfc3370})
+%\item Diffie-Hellman Key Agreement Method (RFC 2631 \cite{rfc2631})
+%\item S/MIME Version 3.2 Certificate Handling (RFC 5750 \cite{rfc5750})
+%\item S/MIME Version 3.2 Message Specification (RFC 5751 \cite{rfc5751})
+%\item Enhanced Security Services for S/MIME (RFC 2634 \cite{rfc2634})
+%\end{itemize}
+\newline
+\newline
 \textbf{Cryptographic Message Syntax (CMS)}
 \newline
-To define how security services, such as confidentiality or integrity, can be added to \acrshort{mime} content types, \acrshort{smime} defines Cryptographic Message Syntax (CMS). The syntax in each case defines the exact encoding scheme for each content type. Discussed below are the different types of messages and different sub-types that are created from these messages \cite{PKCS-7}.
+To define how security features, such as confidentiality or integrity, can be added to \acrshort{mime} content types, \acrshort{smime} defines Cryptographic Message Syntax (CMS). The syntax in each case defines the exact encoding scheme for each content type. Discussed below are the different types of messages and different sub-types that are created from these messages \cite{PKCS-7}.
 \begin{itemize}
 \item Data Content Type is an arbitrary string.  The object created is called "Data".
 \item Digested-Data Content Type is used to provide integrity for the message. The result is typically used as the content for the enveloped-data content type.  The encoded result is an object called "digested-data". The process of creating "digested-data" involves the following two steps
@@ -43,4 +45,4 @@ To define how security services, such as confidentiality or integrity, can be ad
 \newline
 \textbf{Key Management and Certification}
 \newline
-The key management in \acrshort{smime} is handled by X.509. \acrshort{smime} uses X.509 public key certificates signed by \acrshort{ca}s. In general, for key establishment, a user needs to get his or her pair of public and private keys certified by trusted \acrshort{ca}s \cite{SEmailETU}.
+\acrshort{smime} relies on the X.509 \acrfull{pki} to exchange and validate the public keys of other \acrshort{email} users. Therefore, each \acrshort{smime} user has to get a X.509 public key certificate signed by a trustworthy \acrfull{ca}. This digital certificate is always added to any outgoing \acrshort{email}. When an \acrshort{email} user receives an \acrshort{email} secured via \acrshort{smime}, he can always extract the sender's public key and validate it using the attached certificate. The certificate is trustworthy as it was signed by a trusted \acrlong{ca}.

@@ -5,3 +5,100 @@ In this part, we present the results obtained from our live observations. From t
 	\item Medium $\rightarrow$ Less than 10 minutes
 	\item High $\rightarrow$ More than 10 minutes
 \end{itemize}
+
+\subsubsection{Results of \acrshort{pgp}:}
+As we can see from the Table \ref{tab:ResultsPGP}, \acrshort{pgp} requires many steps to configure and to use it because the idea of \acrshort{pgp} is to let the user interact completely and get to know how the security of email works. Therefore, demands that users have some knowledge about encryption. We can see that from the step that the users found difficult in every platform tested which is "Get recipient key". This step is mandatory to encrypt the outgoing email and it’s hard for the novice users to apply the concept of asymmetric cryptography. On one hand,, the most difficult email client to use \acrshort{pgp} with is Thunderbird, because not just there are three steps with \textbf{high} difficulty level and it's the bigger number among the other platforms, but also the buttons to get these three configuration steps done are hidden deep in setting menus. One the other hand, FlowCrypt is the easiest to use \acrshort{pgp}, it generates a key-pair for the novice user with only a few clicks and it searches for the recipient key automatically on all key-servers, so FlowCrypt solves the most difficult step for all users. But, it has two inconvenients; it uploads the generated key-pair on its key-server only, which is makes it harder for the other users to find this newly key-pair, and it's only compatible with Gmail webmail.
+
+\begin{table*}[]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\textbf{Mail user agent}				&\textbf{Steps}				&\textbf{Explanation} 						&\textbf{Difficulty} \\ \hline
+		&1-Install Gpg4o plugin.	&											&Low			\\	\cline{2-4}
+		&2-Generate key pair.		&											&Low			\\	\cline{2-4}
+		&3-Upload old key pair.    & {\color[HTML]{FE0000} It didn't work}		&{\color[HTML]{FE0000} Failed}	\\	\cline{2-4}
+		&							& -Get recipient key						&\vtop{\hbox{\strut \color[HTML]{FE0000}-High: wrong port}\hbox{\strut \color[HTML]{FE0000}for default key servers}}.\\
+		&4-Write new mail.			& -Select to sign or encrypt.				&{\color[HTML]{FE0000} - High: GUI error.}	\\	\cline{2-4}
+		{Outlook 2016}							&5-Verify if incoming email is secured.	&							&Low	\\ \hline
+		&1-Install Enigmail plugin.	&                                       &Low	\\ \cline{2-4}
+		&2-Generate key pair.		&											&Low	\\ \cline{2-4}
+		&3-Activate PGP.			& -Not easy to find option.                 &{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+		&4-Force using PGP.		& -Not easy to find option.					&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+		&5-Get recipient key.		& -Search on one server at a time.			&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+		&6-Write secure mail.		& -Select sign and/or encrypt.				&Low	\\ \cline{2-4}
+		{Thunderbird}							&7-Verify if incoming email is secured.  & \vtop{\hbox{\strut -If signed:$\rightarrow$ envelope icon}\hbox{\strut -If encrypted:$\rightarrow$ lock icon}}	&Low	\\ \hline
+		&1-Install plugin			&											&Low	\\ \cline{2-4}
+		&2-Choose passphrase.		&											&Low	\\ \cline{2-4}
+		&3-Write secure mail		&-Click on secure compose					&Low	\\ \cline{2-4}
+		{\vtop{\hbox{\strut FlowCrypt}\hbox{\strut(Gmail webmail)}}} 		& 4-Verify if incoming email is secured.  &\vtop{\hbox{\strut -If signed, the message is grey}\hbox{\strut  -If encrypted, the message is green.}} & Medium	\\ \hline
+		&1-Install Cryptoplugin.	&											&Low	\\ \cline{2-4}
+		&2-Generate key-pair.					&-Externally on PC.				&{\color[HTML]{FE0000} High} \\ \cline{2-4}
+		&3-Transfer key to mobile device.		&								&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+		&4-Import own key pair to cryptoplugin.	&							&Medium	\\ \cline{2-4}
+		&5-Get recipient key.					&-Search on one key server at a time.	&Medium	\\ \cline{2-4}
+		&6-Write secure email.		&\vtop{\hbox{\strut -Click on "encrypt" button.}\hbox{\strut -Click on "sign" button.}}	&Low	\\ \cline{2-4}
+		{Maildroid}								&7-Verify if incoming email is secured   &								&Low \\ \hline 
+	\end{tabular}
+	\caption{Live observation results for \acrshort{pgp} \label{tab:ResultsPGP}}
+\end{table*}
+
+\subsubsection{Results of \acrshort{smime}:}
+From the Table \ref{tab:ResultsSMIME}, we can see that \acrshort{smime} is easy to use on the desktop \acrshort{mua}s except for Outlook. Thanks to the way \acrshort{smime} works is easier for the novice users, because the users don't have to generate any keys. They receive both public and private digital certificate and they have just import it into the \acrshort{mua}. Once a user receives a signed email, the sender's public certificate is integrated automatically into the \acrshort{mua}. So, the users don't have do any supplementary steps other than configuring \acrshort{smime} in the desired \acrshort{mua}. However, we can conclude that's very difficult to use \acrshort{smime} on Outlook, as the options to import the digital certificate are difficult to find and the user can send an encrypted email only as reply to an a mail that is already secured via \acrshort{smime} (digitally signed). Also, on iOS it's very difficult to activate \acrshort{smime} on the device as the option is not easy to find and there's not any way for the user to send the pfx file back to the device than to send himself an email containing the pfx file. Moreover, the configuration to activate \acrshort{smime} on the iOS devices varies from one iOS version to another.
+
+\begin{table*}[]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\textbf{Mail user agent}				&\textbf{Steps}				&\textbf{Explanation} 						&\textbf{Difficulty} \\ \hline
+{Outlook 2016/2013}								&1-Get a certificate.		&-Request from CA.							&Low			\\	\cline{2-4}
+												&2-Unzip to get the pfx file.		&									&Low			\\	\cline{2-4}
+												&3-Import own certificate.  &-Button to import is hidden				&{\color[HTML]{FE0000}-High.} \\	\cline{2-4}
+												&4-Write a secure mail.		&-Sends encrypt email only as reply		&{\color[HTML]{FE0000}-High.}	\\	\cline{2-4}
+							&5-Verify if incoming email is secured.	&\vtop{\hbox{\strut -icon is very small}\hbox{\strut -and at the top right.}}	&Medium	\\ \hline
+												
+{Thunderbird}									&1-Get a certificate.			&-Request from CA.							&Low	\\ \cline{2-4}
+												&2-Unzip to get the pfx file.		&									&Low	\\	\cline{2-4}
+												&3-Import own certificate.			&                 					&Medium	\\ \cline{2-4}
+												&4-Write a secure mail.		&-Select sign and/or encrypt.					&Low	\\ \cline{2-4}
+												&5-Verify if incoming email		& \vtop{\hbox{\strut -If signed:$\rightarrow$ envelope icon}\hbox{\strut -If encrypted:$\rightarrow$ lock icon}}	&Low	\\ \hline
+												
+{Apple Mail (MaCOS)}							&1-Get a certificate.		&-Request from CA.							&Low	\\	\cline{2-4}
+												&2-Unzip to get the pfx file.		&									&Low	\\	\cline{2-4}
+												&3-Import own certificate.		&-Double click on pfx file.             &Low	\\ \cline{2-4}
+		 										&4-Write a secure mail.		&											&Low	\\ \hline
+												
+{iOS 12 (Latest)}								&1-Get a certificate.			&-Request from CA.							&Low	\\ \cline{2-4}
+												&2-Unzip to get the pfx file.		&-Unzip on a computer.					&Medium		\\	\cline{2-4}
+												&3-Transfer pfx file to the mobile device.		&-Only by mail.				&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+												&4-Activate S/MIME.			&-Option is hidden							&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+												&5-Import own certificate.			&-Click on pfx received by mail     &Low	\\ \cline{2-4}
+												&6-Write a secure email.		&-Auto sign.	&Low	\\ \cline{2-4}
+												&7-Verify if incoming email is secured   &\vtop{\hbox{\strut -If signed:$\rightarrow$ just sign}\hbox{\strut -If encrypted:$\rightarrow$ lock icon}}								&Low \\ \hline 
+
+{Android}										&1-Get a certificate.			&-Request from CA.							&Low	\\ \cline{2-4}
+												&2-Unzip to get the pfx file.		&-Unzip on a computer.					&Medium		\\	\cline{2-4}
+												&3-Install Cryptoplugin.		&-Install an application.				&Low	\\ \cline{2-4}
+												&4-Transfer pfx file to the mobile device.		&-Only by mail.				&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+												&5-Import own certificate.			&									&Low	\\ \cline{2-4}
+												&6-Write a secure email.		&-Checkboxes to sign and/or encrypt.	&Low	\\ \cline{2-4}
+												&7-Verify if incoming email is secured   &								&Low \\ \hline
+	\end{tabular}
+	\caption{Live observation results for \acrshort{smime} \label{tab:ResultsSMIME}}
+\end{table*}
+
+\subsubsection{Results of \acrshort{pep}:}
+We can see from the Table \ref{tab:ResultspEp} that \acrshort{pep} has the fewest steps in order to configure it and to use it. \acrshort{pep} abstracts many layers and requires only the comparison of trustwords through a handshake which is a very simple step to do. Therefore, \acrshort{pep} is for the ones that would like to secure their email communication without knowing anything about the functionalities and the majority of the users know nothing about security mechanisms and cryptography. So, \acrshort{pep} is the easiest technology to use but it's not (yet) compatible with all platforms. As consequence, we couldn't test it on Apple MacOS or Apple iOS platforms which is used by a big number of people.
+
+\begin{table*}[!h]
+	\begin{tabularx}{\textwidth}{|l|l|X|l|}
+		\hline
+		\textbf{Mail user agent}		& \textbf{Steps}   & \textbf{Explanation}  & \textbf{Difficulty}							\\ \hline
+		& 1-Install Enigmail plugin.	&      						 											& Low	\\ \cline{2-4}
+		& 2-Force using pEp.			& -Not easy to arrive to option.& {\color[HTML]{FE0000} High} \\ \cline{2-4}
+		& 3-Perform Handshake			& -Communicate and compare trustwords after receiving the first email.	& Low	\\ \cline{2-4}
+		{Thunderbird}					& 4-Verify if incoming email is secured  &                 				& Low	\\ \hline
+		& 1-Install pEp mail app.		&                                                                   	& Low	\\ \cline{2-4}
+		& 2-Perform Handshake.			&																		& Low	\\ \cline{2-4}
+		{Android}     					& 3-Verify if incoming email is secured. &								& Low	\\
+		\hline               
+	\end{tabularx}
+	\caption{Live observation results for \acrshort{pep} \label{tab:ResultspEp}}
+\end{table*}	
