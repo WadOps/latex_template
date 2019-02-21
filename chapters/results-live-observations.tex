@@ -8,8 +8,10 @@ In this part, we present the results obtained from our live observations. From t
 
 \subsubsection{Results of \acrshort{pgp}:}
 As we can see from the Table \ref{tab:ResultsPGP}, \acrshort{pgp} requires many steps to configure and to use it because the idea of \acrshort{pgp} is to let the user interact completely and get to know how the security of email works. Therefore, demands that users have some knowledge about encryption. We can see that from the step that the users found difficult in every platform tested which is "Get recipient key". This step is mandatory to encrypt the outgoing email and it’s hard for the novice users to apply the concept of asymmetric cryptography. On one hand,, the most difficult email client to use \acrshort{pgp} with is Thunderbird, because not just there are three steps with \textbf{high} difficulty level and it's the bigger number among the other platforms, but also the buttons to get these three configuration steps done are hidden deep in setting menus. One the other hand, FlowCrypt is the easiest to use \acrshort{pgp}, it generates a key-pair for the novice user with only a few clicks and it searches for the recipient key automatically on all key-servers, so FlowCrypt solves the most difficult step for all users. But, it has two inconvenients; it uploads the generated key-pair on its key-server only, which is makes it harder for the other users to find this newly key-pair, and it's only compatible with Gmail webmail.
-
+{\def\arraystretch{1.2}\tabcolsep=3pt
 \begin{table*}[]
+	\scriptsize
+	\centering
 	\begin{tabular}{|l|l|l|l|}
 		\hline
 		\textbf{Mail user agent}				&\textbf{Steps}				&\textbf{Explanation} 						&\textbf{Difficulty} \\ \hline
@@ -40,11 +42,15 @@ As we can see from the Table \ref{tab:ResultsPGP}, \acrshort{pgp} requires many 
 	\end{tabular}
 	\caption{Live observation results for \acrshort{pgp} \label{tab:ResultsPGP}}
 \end{table*}
+}
 
 \subsubsection{Results of \acrshort{smime}:}
 From the Table \ref{tab:ResultsSMIME}, we can see that \acrshort{smime} is easy to use on the desktop \acrshort{mua}s except for Outlook. Thanks to the way \acrshort{smime} works is easier for the novice users, because the users don't have to generate any keys. They receive both public and private digital certificate and they have just import it into the \acrshort{mua}. Once a user receives a signed email, the sender's public certificate is integrated automatically into the \acrshort{mua}. So, the users don't have do any supplementary steps other than configuring \acrshort{smime} in the desired \acrshort{mua}. However, we can conclude that's very difficult to use \acrshort{smime} on Outlook, as the options to import the digital certificate are difficult to find and the user can send an encrypted email only as reply to an a mail that is already secured via \acrshort{smime} (digitally signed). Also, on iOS it's very difficult to activate \acrshort{smime} on the device as the option is not easy to find and there's not any way for the user to send the pfx file back to the device than to send himself an email containing the pfx file. Moreover, the configuration to activate \acrshort{smime} on the iOS devices varies from one iOS version to another.
 
+{\def\arraystretch{1.2}\tabcolsep=3pt
 \begin{table*}[]
+	\scriptsize
+	\centering
 	\begin{tabular}{|l|l|l|l|}
 		\hline
 		\textbf{Mail user agent}				&\textbf{Steps}				&\textbf{Explanation} 						&\textbf{Difficulty} \\ \hline
@@ -83,11 +89,15 @@ From the Table \ref{tab:ResultsSMIME}, we can see that \acrshort{smime} is easy 
 	\end{tabular}
 	\caption{Live observation results for \acrshort{smime} \label{tab:ResultsSMIME}}
 \end{table*}
+}
 
 \subsubsection{Results of \acrshort{pep}:}
 We can see from the Table \ref{tab:ResultspEp} that \acrshort{pep} has the fewest steps in order to configure it and to use it. \acrshort{pep} abstracts many layers and requires only the comparison of trustwords through a handshake which is a very simple step to do. Therefore, \acrshort{pep} is for the ones that would like to secure their email communication without knowing anything about the functionalities and the majority of the users know nothing about security mechanisms and cryptography. So, \acrshort{pep} is the easiest technology to use but it's not (yet) compatible with all platforms. As consequence, we couldn't test it on Apple MacOS or Apple iOS platforms which is used by a big number of people.
 
+{\def\arraystretch{1.2}\tabcolsep=3pt
 \begin{table*}[!h]
+	\scriptsize
+	\centering
 	\begin{tabularx}{\textwidth}{|l|l|X|l|}
 		\hline
 		\textbf{Mail user agent}		& \textbf{Steps}   & \textbf{Explanation}  & \textbf{Difficulty}							\\ \hline
@@ -102,3 +112,4 @@ We can see from the Table \ref{tab:ResultspEp} that \acrshort{pep} has the fewes
 	\end{tabularx}
 	\caption{Live observation results for \acrshort{pep} \label{tab:ResultspEp}}
 \end{table*}	
+}

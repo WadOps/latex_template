@@ -18,6 +18,8 @@
 \usepackage{color}
 \usepackage{hyperref}
 \usepackage[acronym]{glossaries} % Glossar und Akronyme
+\usepackage{appendix}
+\usepackage{etoolbox}
 
 % folgende Zeile erzwingt URL-Umbrueche
 \def\UrlBreaks{\do\/\do-}
@@ -107,6 +109,8 @@
 %++++++++++++++++++++++++++++++++++++++++
 \bibliography{ref,rfc}
 
+%\input{chapters/appendix}
+
 \end{document}
 
 %++++++++++++++++++++++++++++++++
@@ -124,7 +128,6 @@
 %++++++++++++++++++++++++++++++++
 %+    Table                     +
 %++++++++++++++++++++++++++++++++
-
 %\begin{table}
 %\centering
 %\caption{Frequency of Special Characters}

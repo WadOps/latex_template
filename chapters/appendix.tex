@@ -1,0 +1,104 @@
+	\clearpage
+\begin{appendices}
+	\section{Appendix}
+{\def\arraystretch{1.2}\tabcolsep=3pt
+	\begin{table*}[]
+		\scriptsize
+		\centering
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			\textbf{Mail user agent}				&\textbf{Steps}				&\textbf{Explanation} 						&\textbf{Difficulty} \\ \hline
+			&1-Install Gpg4o plugin.	&											&Low			\\	\cline{2-4}
+			&2-Generate key pair.		&											&Low			\\	\cline{2-4}
+			&3-Upload old key pair.    & {\color[HTML]{FE0000} It didn't work}		&{\color[HTML]{FE0000} Failed}	\\	\cline{2-4}
+			&							& -Get recipient key						&\vtop{\hbox{\strut \color[HTML]{FE0000}-High: wrong port}\hbox{\strut \color[HTML]{FE0000}for default key servers}}.\\
+			&4-Write new mail.			& -Select to sign or encrypt.				&{\color[HTML]{FE0000} - High: GUI error.}	\\	\cline{2-4}
+			{Outlook 2016}							&5-Verify if incoming email is secured.	&							&Low	\\ \hline
+			&1-Install Enigmail plugin.	&                                       &Low	\\ \cline{2-4}
+			&2-Generate key pair.		&											&Low	\\ \cline{2-4}
+			&3-Activate PGP.			& -Not easy to find option.                 &{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+			&4-Force using PGP.		& -Not easy to find option.					&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+			&5-Get recipient key.		& -Search on one server at a time.			&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+			&6-Write secure mail.		& -Select sign and/or encrypt.				&Low	\\ \cline{2-4}
+			{Thunderbird}							&7-Verify if incoming email is secured.  & \vtop{\hbox{\strut -If signed:$\rightarrow$ envelope icon}\hbox{\strut -If encrypted:$\rightarrow$ lock icon}}	&Low	\\ \hline
+			&1-Install plugin			&											&Low	\\ \cline{2-4}
+			&2-Choose passphrase.		&											&Low	\\ \cline{2-4}
+			&3-Write secure mail		&-Click on secure compose					&Low	\\ \cline{2-4}
+			{\vtop{\hbox{\strut FlowCrypt}\hbox{\strut(Gmail webmail)}}} 		& 4-Verify if incoming email is secured.  &\vtop{\hbox{\strut -If signed, the message is grey}\hbox{\strut  -If encrypted, the message is green.}} & Medium	\\ \hline
+			&1-Install Cryptoplugin.	&											&Low	\\ \cline{2-4}
+			&2-Generate key-pair.					&-Externally on PC.				&{\color[HTML]{FE0000} High} \\ \cline{2-4}
+			&3-Transfer key to mobile device.		&								&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+			&4-Import own key pair to cryptoplugin.	&							&Medium	\\ \cline{2-4}
+			&5-Get recipient key.					&-Search on one key server at a time.	&Medium	\\ \cline{2-4}
+			&6-Write secure email.		&\vtop{\hbox{\strut -Click on "encrypt" button.}\hbox{\strut -Click on "sign" button.}}	&Low	\\ \cline{2-4}
+			{Maildroid}								&7-Verify if incoming email is secured   &								&Low \\ \hline 
+		\end{tabular}
+		\caption{Live observation results for \acrshort{pgp} \label{tab:ResultsPGP}}
+	\end{table*}
+}
+
+{\def\arraystretch{1.2}\tabcolsep=3pt
+	\begin{table*}[]
+		\scriptsize
+		\centering
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			\textbf{Mail user agent}				&\textbf{Steps}				&\textbf{Explanation} 						&\textbf{Difficulty} \\ \hline
+			{Outlook 2016/2013}								&1-Get a certificate.		&-Request from CA.							&Low			\\	\cline{2-4}
+			&2-Unzip to get the pfx file.		&									&Low			\\	\cline{2-4}
+			&3-Import own certificate.  &-Button to import is hidden				&{\color[HTML]{FE0000}-High.} \\	\cline{2-4}
+			&4-Write a secure mail.		&-Sends encrypt email only as reply		&{\color[HTML]{FE0000}-High.}	\\	\cline{2-4}
+			&5-Verify if incoming email is secured.	&\vtop{\hbox{\strut -icon is very small}\hbox{\strut -and at the top right.}}	&Medium	\\ \hline
+			
+			{Thunderbird}									&1-Get a certificate.			&-Request from CA.							&Low	\\ \cline{2-4}
+			&2-Unzip to get the pfx file.		&									&Low	\\	\cline{2-4}
+			&3-Import own certificate.			&                 					&Medium	\\ \cline{2-4}
+			&4-Write a secure mail.		&-Select sign and/or encrypt.					&Low	\\ \cline{2-4}
+			&5-Verify if incoming email		& \vtop{\hbox{\strut -If signed:$\rightarrow$ envelope icon}\hbox{\strut -If encrypted:$\rightarrow$ lock icon}}	&Low	\\ \hline
+			
+			{Apple Mail (MaCOS)}							&1-Get a certificate.		&-Request from CA.							&Low	\\	\cline{2-4}
+			&2-Unzip to get the pfx file.		&									&Low	\\	\cline{2-4}
+			&3-Import own certificate.		&-Double click on pfx file.             &Low	\\ \cline{2-4}
+			&4-Write a secure mail.		&											&Low	\\ \hline
+			
+			{iOS 12 (Latest)}								&1-Get a certificate.			&-Request from CA.							&Low	\\ \cline{2-4}
+			&2-Unzip to get the pfx file.		&-Unzip on a computer.					&Medium		\\	\cline{2-4}
+			&3-Transfer pfx file to the mobile device.		&-Only by mail.				&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+			&4-Activate S/MIME.			&-Option is hidden							&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+			&5-Import own certificate.			&-Click on pfx received by mail     &Low	\\ \cline{2-4}
+			&6-Write a secure email.		&-Auto sign.	&Low	\\ \cline{2-4}
+			&7-Verify if incoming email is secured   &\vtop{\hbox{\strut -If signed:$\rightarrow$ just sign}\hbox{\strut -If encrypted:$\rightarrow$ lock icon}}								&Low \\ \hline 
+			
+			{Android}										&1-Get a certificate.			&-Request from CA.							&Low	\\ \cline{2-4}
+			&2-Unzip to get the pfx file.		&-Unzip on a computer.					&Medium		\\	\cline{2-4}
+			&3-Install Cryptoplugin.		&-Install an application.				&Low	\\ \cline{2-4}
+			&4-Transfer pfx file to the mobile device.		&-Only by mail.				&{\color[HTML]{FE0000} High}	\\ \cline{2-4}
+			&5-Import own certificate.			&									&Low	\\ \cline{2-4}
+			&6-Write a secure email.		&-Checkboxes to sign and/or encrypt.	&Low	\\ \cline{2-4}
+			&7-Verify if incoming email is secured   &								&Low \\ \hline
+		\end{tabular}
+		\caption{Live observation results for \acrshort{smime} \label{tab:ResultsSMIME}}
+	\end{table*}
+}
+
+{\def\arraystretch{1.2}\tabcolsep=3pt
+	\begin{table*}[!h]
+		\scriptsize
+		\centering
+		\begin{tabularx}{\textwidth}{|l|l|X|l|}
+			\hline
+			\textbf{Mail user agent}		& \textbf{Steps}   & \textbf{Explanation}  & \textbf{Difficulty}							\\ \hline
+			& 1-Install Enigmail plugin.	&      						 											& Low	\\ \cline{2-4}
+			& 2-Force using pEp.			& -Not easy to arrive to option.& {\color[HTML]{FE0000} High} \\ \cline{2-4}
+			& 3-Perform Handshake			& -Communicate and compare trustwords after receiving the first email.	& Low	\\ \cline{2-4}
+			{Thunderbird}					& 4-Verify if incoming email is secured  &                 				& Low	\\ \hline
+			& 1-Install pEp mail app.		&                                                                   	& Low	\\ \cline{2-4}
+			& 2-Perform Handshake.			&																		& Low	\\ \cline{2-4}
+			{Android}     					& 3-Verify if incoming email is secured. &								& Low	\\
+			\hline               
+		\end{tabularx}
+		\caption{Live observation results for \acrshort{pep} \label{tab:ResultspEp}}
+	\end{table*}	
+}
+
+\end{appendices}
