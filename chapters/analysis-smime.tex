@@ -19,7 +19,7 @@ With the increase of power in terms of computation and networking capability, pe
 To define how security features, such as confidentiality or integrity, can be added to \acrshort{mime} content types, \acrshort{smime} defines Cryptographic Message Syntax (CMS). The syntax in each case defines the exact encoding scheme for each content type. Discussed below are the different types of messages and different sub-types that are created from these messages \cite{PKCS-7}.
 \begin{itemize}
 \item Data Content Type is an arbitrary string.  The object created is called "Data".
-\item Digested-Data Content Type is used to provide integrity for the message. The result is typically used as the content for the enveloped-data content type.  The encoded result is an object called "digested-data". The process of creating "digested-data" involves the following two steps
+\item Digested-Data Content Type is used to provide integrity for the message. The result is typically used as the content for the enveloped-data content type. The encoded result is an object called "digested-data". The process of creating "digested-data" involves the following two steps
 \begin{enumerate}
 \item Using the hash algorithm of the user's choice a message digest is created from the content.
 \item The message digest, the algorithm, and the content are added together to create the "digested-data" object.
